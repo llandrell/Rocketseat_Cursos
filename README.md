@@ -48,4 +48,7 @@
       -color é usada para definir a cor do texto em um elemento 
       -width é usada para definir a largura de um elemento
       -margin é usada para definir o espaçamento entre um elemento HTML e os elementos ao seu redor. Ela permite especificar valores para o espaçamento nas quatro direções: superior, direita, inferior e esquerda
-      -
+        - margin: 0 auto 72px; define um elemento com margem superior e inferior de 0 pixels, margem lateral automática para centralizar horizontalmente e uma margem inferior de 72 pixels.
+      -border é usada para definir a borda de um elemento. Ela pode ser usada para especificar a largura, estilo e cor da borda em torno de um elemento HTML.
+        -order 1px red solid; cria uma borda ao redor de um elemento HTML com uma largura de 1 pixel, cor vermelha e estilo sólido.
+      
