@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items:  center;
+    margin-bottom: 55px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    gap: 48px;
+    padding: 0;
+    
+}
+
+.page {
+    width: 1000px;
+    margin: 65px auto 0;
+    border: 1px solid red;
+}
