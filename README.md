@@ -94,7 +94,7 @@ Estrutura:
     
     <form action = "URL" método = "POST/GET" >
     
-    </ formulário >
+    </form >
 
 
 
