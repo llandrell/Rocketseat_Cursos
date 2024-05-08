@@ -1,180 +1,239 @@
+/* Definindo as propriedades de margem, preenchimento e modelo de caixa para todos os elementos, ZERANDO O CSS */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Define a margem de todos os elementos como 0 para eliminar espaços em branco */
+    padding: 0; /* Define o preenchimento de todos os elementos como 0 para eliminar espaços internos */
+    box-sizing: border-box; /* Define o modelo de caixa como border-box para facilitar o dimensionamento */
 }
-body, input, button, select, textarea {
-    font-family: 'Poppins', sans-serif;
+
+/* Define a fonte para elementos de texto específicos */
+body, input, select, textarea {
+    font-family: 'Poppins', sans-serif; /* Define a fonte para esses elementos como 'Poppins' e fallback para sans-serif */
 }
+
+/* Define o plano de fundo para o corpo da página */
 body {  
-    background: #e5e5e5;
-    
+    background: #e5e5e5; /* Define o plano de fundo do corpo como uma cor cinza claro */
 }
 
-body::before{
-    content: '';
-    width: 100%;
-    height: 368px;
-    background: #121214;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    display: block;
+/* Cria um pseudo-elemento antes do conteúdo do corpo */
+body::before {
+    content: ''; /* Define o conteúdo do pseudo-elemento como vazio */
+    width: 100%; /* Define a largura do pseudo-elemento como 100% da largura do corpo */
+    height: 368px; /* Define a altura do pseudo-elemento como 368 pixels */
+    background: #121214; /* Define o plano de fundo do pseudo-elemento como uma cor preta */
+    position: absolute; /* Define a posição do pseudo-elemento como absoluta */
+    top: 0; /* Posiciona o pseudo-elemento no topo do corpo */
+    left: 0; /* Posiciona o pseudo-elemento à esquerda do corpo */
+    z-index: -1; /* Define a camada z do pseudo-elemento para estar atrás do conteúdo do corpo */
+    display: block; /* Define o pseudo-elemento como um bloco */
 }
-.page{
-    max-width: 736px;
-    margin: auto;
+/* Define as propriedades para a classe .page */
+.page {
+    max-width: 736px; /* Define a largura máxima para a página como 736 pixels */
+    margin: auto; /* Centraliza a página horizontalmente na tela */
 }
-header{
-    width: 319px;
-    margin-top: 74px;
+
+/* Define as propriedades para o elemento <header> */
+header {
+    width: 319px; /* Define a largura do cabeçalho como 319 pixels */
+    margin-top: 74px; /* Define a margem superior do cabeçalho como 74 pixels */
 }
+
+/* Define as propriedades para os títulos dentro do cabeçalho */
 header h1 {
-    font-family: 'Archivo', sans-serif;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 42px;
-    color: white;
-    margin-bottom: 24px;
+    font-family: 'Archivo', sans-serif; /* Define a fonte para o título como 'Archivo' e fallback para sans-serif */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    font-size: 36px; /* Define o tamanho da fonte como 36 pixels */
+    line-height: 42px; /* Define a altura da linha como 42 pixels */
+    color: white; /* Define a cor do texto como branco */
+    margin-bottom: 24px; /* Define a margem inferior do título como 24 pixels */
+}
 
-}   
-
+/* Define as propriedades para os parágrafos dentro do cabeçalho */
 header p {
-    font-size: 16px;
-    line-height: 26px;
-    color: #42d3ff;
-
+    font-size: 16px; /* Define o tamanho da fonte do parágrafo como 16 pixels */
+    line-height: 26px; /* Define a altura da linha do parágrafo como 26 pixels */
+    color: #42d3ff; /* Define a cor do texto como azul claro (#42d3ff) */
 }
 
-form{
-    margin-top: 38px;
-    background: #fafafc;
-    min-height: 300px;
-    border-radius: 8px 8px 0 0 ;
-    padding: 64px;
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-}
-fieldset{
-    border: none;
-   
-
-}
-.fieldset-wrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+/* Define as propriedades para o elemento <form> */
+form {
+    margin-top: 38px; /* Define a margem superior do formulário como 38 pixels */
+    background: #fafafc; /* Define o plano de fundo do formulário como uma cor cinza claro (#fafafc) */
+    min-height: 300px; /* Define a altura mínima do formulário como 300 pixels */
+    border-radius: 8px 8px 0 0; /* Define os cantos arredondados para o topo esquerdo e direito do formulário */
+    padding: 64px; /* Define o preenchimento interno do formulário como 64 pixels */
+    display: flex; /* Define o layout do formulário como flexível */
+    flex-direction: column; /* Define a direção principal do layout como coluna */
+    gap: 48px; /* Define o espaçamento entre os elementos filhos do formulário como 48 pixels */
 }
 
-fieldset legend{
-    font-family: 'Archivo', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 34px;
-    width: 100%;
-    border-bottom: 1px solid #E6E6F0;
-    padding-bottom: 16px;
+/* Define as propriedades para o elemento <fieldset> */
+fieldset {
+    border: none; /* Remove a borda padrão do campo do conjunto de campos */
 }
 
+/* Define as propriedades para o contêiner dos elementos do conjunto de campos */
+.fieldset-wrapper {
+    display: flex; /* Define o layout do contêiner como flexível */
+    flex-direction: column; /* Define a direção principal do layout como coluna */
+    gap: 24px; /* Define o espaçamento entre os elementos filhos do contêiner como 24 pixels */
+}
+
+/* Define as propriedades para a legenda dentro do elemento <fieldset> */
+fieldset legend {
+    font-family: 'Archivo', sans-serif; /* Define a fonte da legenda como 'Archivo' e fallback para sans-serif */
+    font-style: normal; /* Define o estilo da fonte como normal */
+    font-weight: 600; /* Define o peso da fonte como 600 (negrito) */
+    font-size: 24px; /* Define o tamanho da fonte como 24 pixels */
+    line-height: 34px; /* Define a altura da linha como 34 pixels */
+    width: 100%; /* Define a largura da legenda como 100% */
+    border-bottom: 1px solid #E6E6F0; /* Adiciona uma borda inferior de 1 pixel sólido com uma cor cinza claro (#E6E6F0) */
+    padding-bottom: 16px; /* Adiciona preenchimento inferior de 16 pixels */
+}
+
+/* Define as propriedades para o contêiner dos campos de entrada */
 .input-wrapper {
-    display: flex;
-    flex-direction: column;
-
-}
-.input-wrapper label, .checkbox-wrapper label {
-    font-size: 14px;
-    line-height: 24px;
-    color: #4e4958;
-    margin-bottom: 8px;
-}
-.input-wrapper label span{
-    margin-left: 12px;
-    font-size: 12px;
-    line-height: 20px;
-    color: #c1bccc;
-    
-}
-.input-wrapper label span:hover{
-    color: #6a686e;
-}
-.input-wrapper input, .input-wrapper textarea, .input-wrapper select{
-    background: #fafafc;
-    border: 1px solid #e6e6f0;
-    border-radius: 8px;
-    height: 56px;
-    padding: 0 24px;
-    font-size: 16px;
-    line-height: 26px;
-    color: #c1bccc;
-  
+    display: flex; /* Define o layout do contêiner como flexível */
+    flex-direction: column; /* Define a direção principal do layout como coluna */
 }
 
+/* Define as propriedades para as etiquetas dentro do contêiner dos campos de entrada e do contêiner dos campos de seleção */
+.input-wrapper label,
+.checkbox-wrapper label {
+    font-size: 14px; /* Define o tamanho da fonte da etiqueta como 14 pixels */
+    line-height: 24px; /* Define a altura da linha da etiqueta como 24 pixels */
+    color: #4e4958; /* Define a cor do texto da etiqueta como um tom de cinza (#4e4958) */
+    margin-bottom: 8px; /* Define a margem inferior da etiqueta como 8 pixels */
+}
+
+/* Define as propriedades para o texto dentro das etiquetas */
+.input-wrapper label span {
+    margin-left: 12px; /* Define a margem à esquerda do texto dentro da etiqueta como 12 pixels */
+    font-size: 12px; /* Define o tamanho da fonte do texto dentro da etiqueta como 12 pixels */
+    line-height: 20px; /* Define a altura da linha do texto dentro da etiqueta como 20 pixels */
+    color: #c1bccc; /* Define a cor do texto dentro da etiqueta como um tom de cinza mais claro (#c1bccc) */
+}
+/* Define as propriedades para o texto dentro da etiqueta quando o cursor está sobre ele */
+.input-wrapper label span:hover {
+    color: #6a686e; /* Muda a cor do texto para um tom mais escuro de cinza (#6a686e) quando o cursor está sobre ele */
+}
+
+/* Define as propriedades para os campos de entrada, área de texto e seleção dentro do contêiner */
+.input-wrapper input,
+.input-wrapper textarea,
+.input-wrapper select {
+    background: #fafafc; /* Define o plano de fundo dos campos como uma cor cinza claro (#fafafc) */
+    border: 1px solid #e6e6f0; /* Adiciona uma borda de 1 pixel sólido com uma cor cinza claro (#e6e6f0) */
+    border-radius: 8px; /* Define o raio da borda dos campos como 8 pixels */
+    height: 56px; /* Define a altura dos campos como 56 pixels */
+    padding: 0 24px; /* Adiciona preenchimento interno de 0 no topo e na base, e 24 pixels nas laterais */
+    font-size: 16px; /* Define o tamanho da fonte dos campos como 16 pixels */
+    line-height: 26px; /* Define a altura da linha dos campos como 26 pixels */
+    color: #c1bccc; /* Define a cor do texto dos campos como um tom de cinza mais claro (#c1bccc) */
+}
+
+/* Define as propriedades específicas para a área de texto dentro do contêiner */
 .input-wrapper textarea {
-    padding: 0;
-    height: 200px;
+    padding: 0; /* Remove o preenchimento interno da área de texto */
+    height: 200px; /* Define a altura da área de texto como 200 pixels */
 }
-.input-wrapper select{
-    appearance: none;
+
+/* Define as propriedades específicas para o campo de seleção dentro do contêiner */
+.input-wrapper select {
+    appearance: none; /* Remove o estilo padrão do campo de seleção */
     -moz-appearance: none;
     -webkit-appearance: none;
     -ms-appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
-    background-position: right 24px top 50%;
-
-}
-.col-3{
-    display: flex;
-    gap: 20px;
-}
-.col-3 > div:nth-child(1){
-    width: 100%;
-}
-.checkbox-wrapper{
-    position: relative;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A"); /* Adiciona uma seta personalizada como imagem de fundo */
+    background-repeat: no-repeat; /* Evita que a imagem de fundo seja repetida */
+    background-position: right 24px top 50%; /* Posiciona a imagem de fundo à direita e verticalmente centralizada */
 }
 
-.checkbox-wrapper label{
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin: 0;
-}
-.checkbox-wrapper input{
-   position: absolute;
-   width: 24px;
-   height: 24px;
-   opacity: 0;
-   
-}
-.checkbox-wrapper label::before{
-    content: '';
-    width: 24px;
-    height: 24px;
-    border: 1px solid #b0bde1;
-    border-radius: 8px;
-}
-.checkbox-wrapper input:checked + label::before{
-    background-image: url("data:image/svg+xml,%3Csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
-    background-position: center;
+/* Define as propriedades para um layout de coluna com espaçamento entre os elementos */
+.col-3 {
+    display: flex; /* Define o layout como flexível */
+    gap: 20px; /* Define o espaçamento entre os elementos como 20 pixels */
 }
 
-.checkbox-wrapper input:focus + label::before{
-    outline: 2px solid black;
+/* Define as propriedades para o primeiro filho do layout de coluna */
+.col-3 > div:nth-child(1) {
+    width: 100%; /* Define a largura do primeiro filho como 100% */
+}
 
+/* Define as propriedades para o contêiner dos campos de seleção */
+.checkbox-wrapper {
+    position: relative; /* Define a posição como relativa para permitir o posicionamento absoluto dos elementos filhos */
 }
-footer{
-    background: #F0F0F4;
-    height: 134px;
-    display: flex;
-    flex-direction: column;
-    padding: 40px 64px;
-    margin-bottom: 100px;
+
+/* Define as propriedades para o contêiner dos campos de seleção */
+.checkbox-wrapper label {
+    display: flex; /* Define o layout do rótulo como flexível */
+    align-items: center; /* Alinha verticalmente os elementos filhos ao centro */
+    gap: 16px; /* Define o espaçamento entre os elementos filhos como 16 pixels */
+    margin: 0; /* Remove as margens padrão */
 }
-footer .button{
-    height: 56px;
+
+/* Define as propriedades para os campos de entrada de seleção */
+.checkbox-wrapper input {
+    position: absolute; /* Define a posição absoluta para permitir um rótulo personalizado */
+    width: 24px; /* Define a largura do campo de entrada como 24 pixels */
+    height: 24px; /* Define a altura do campo de entrada como 24 pixels */
+    opacity: 0; /* Torna o campo de entrada invisível */
+}
+
+/* Define as propriedades para o pseudo-elemento do rótulo */
+.checkbox-wrapper label::before {
+    content: ''; /* Adiciona um conteúdo vazio ao pseudo-elemento */
+    width: 24px; /* Define a largura do pseudo-elemento como 24 pixels */
+    height: 24px; /* Define a altura do pseudo-elemento como 24 pixels */
+    border: 1px solid #b0bde1; /* Adiciona uma borda de 1 pixel sólido com uma cor azul claro (#b0bde1) */
+    border-radius: 8px; /* Define o raio da borda do pseudo-elemento como 8 pixels */
+}
+
+/* Define as propriedades para o pseudo-elemento do rótulo quando o campo de entrada está marcado */
+.checkbox-wrapper input:checked + label::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A"); /* Adiciona uma imagem de marca de seleção SVG quando o campo de entrada está marcado */
+    background-repeat: no-repeat; /* Evita a repetição da imagem de fundo */
+    background-position: center; /* Centraliza a imagem de fundo */
+}
+
+/* Define as propriedades para o pseudo-elemento do rótulo quando o campo de entrada está focado */
+.checkbox-wrapper input:focus + label::before {
+    outline: 2px solid black; /* Adiciona um contorno preto de 2 pixels ao redor do pseudo-elemento quando o campo de entrada está focado */
+}
+
+/* Define as propriedades para o elemento <footer> */
+footer {
+    background: #F0F0F4; /* Define o plano de fundo do rodapé como uma cor cinza claro (#F0F0F4) */
+    height: 134px; /* Define a altura do rodapé como 134 pixels */
+    display: flex; /* Define o layout do rodapé como flexível */
+    flex-direction: column; /* Define a direção principal do layout como coluna */
+    padding: 40px 64px; /* Adiciona preenchimento interno de 40 pixels no topo e na base, e 64 pixels nas laterais */
+    margin-bottom: 100px; /* Define a margem inferior do rodapé como 100 pixels */
+    border-top: 1px solid #d6d6d6; /* Cria um linha superior */
+    border-radius: 0 0 8px 8px; /* Define os cantos arredondados para o lado esquerdo e direito do formulário nas bordas inferiores */
+}
+
+/* Define as propriedades para o botão dentro do rodapé */
+footer .button {
+    height: 56px; /* Define a altura do botão como 56 pixels */
+    background:#04d361; /* Define a cor do botao, na cor verde*/
+    border-radius: 8px; /* Define os cantos arredondados */
+    font-family: 'Archivo'; /*Define a fonte do bottom */
+    font-weight: 600; /* Define o peso da fonte como 600 (negrito) */
+    font-size: 16px; /* Define o tamanho da fonte como 16 pixels */
+    line-height: 26px; /* Define a altura da linha como 26 pixels */
+    border: 0;
+    color: white;
+}
+
+/* Define as propriedades para o texto dentro da etiqueta quando o cursor está sobre ele */
+footer .button:hover{
+    background:#02642e; /* Define a cor do botao, na cor verde*/
+    font-size: 18px; /* Define o tamanho da fonte como 16 pixels */
+}
+
+input:invalid{
+    border: solid 2px red;
 }
